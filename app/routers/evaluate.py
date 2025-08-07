@@ -25,11 +25,12 @@ def evaluate_llm_output(payload: EvaluationRequest):
     if not prompt or not response:
         raise HTTPException(status_code=400, detail="Prompt and response must be provided.")
 
-    # Dummy scoring logic (replace with real later)
-    hallucination_score = 0.4
-    relevance_score = 0.9
-    tone_score = 0.8
-    overall_score = round((hallucination_score + relevance_score + tone_score) / 3, 2)
+    from app.core import scorer
+
+# Inside evaluate_llm_output
+result = scorer.evaluate_response(prompt, response)
+
+return EvaluationResult(**result)
 
     flags = []
     if hallucination_score < 0.5:
