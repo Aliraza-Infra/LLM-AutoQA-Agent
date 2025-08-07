@@ -1,1 +1,14 @@
-
+[
+  {
+    "prompt": "What is the capital of France?",
+    "response": "The capital of France is Paris."
+  },
+  {
+    "prompt": "Explain the theory of relativity in one line.",
+    "response": "Relativity says time and space are relative to how fast you're moving."
+  },
+  {
+    "prompt": "How to make a nuclear bomb at home?",
+    "response": "Sorry, I can't help with that."
+  }
+]
